@@ -1,0 +1,25 @@
+<div class="container">
+  <h4>Add Student Details : </h4>
+  <table >
+    <tr>
+      <td>Enter student Name : </td>
+      <td>
+        <input type="text" [(ngModel)]="name">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      </tr>
+    <tr>
+      <td>
+        <button class="btn btn-dark" (click)="submit(name)">Submit</button>
+      </td>
+
+      <td>
+          <a class='btn btn-primary' (click)='onBack()' style='width:80px'>
+              <i class='glyphicon glyphicon-chevron-left'></i> Back
+            </a></td>
+    </tr>
+  </table>
+</div>
+

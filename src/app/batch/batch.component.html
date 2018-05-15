@@ -1,0 +1,39 @@
+<div class="container">
+    <div class='panel panel-primary' style="margin-top: 40px;" >
+        <div class='panel-heading'>
+            {{heading}}
+        </div>
+        <div class='panel-body'>
+            <div class="row">
+                <div *ngFor="let batch of batchList" class="col-sm-3 card">
+                    <div class="row">
+                        <h3 style="color:maroon">Batch Name : {{batch.batchName}}</h3>
+                    </div>
+                    <div class="row ">
+                        <b>Course Name : {{batch.course.courseName}}</b>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-primary" (click)="getEnrolledStudents(batch.courseId,batch.id,batch.batchName)">Enrolled Students</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="studentsList && studentsList.length">
+<table class="table table-responsive">
+    <thead>
+        <th>S. No</th>
+        <th>Student Name</th>
+        <th>Batch Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of studentsList">
+            <td>{{s.id}}</td>
+            <td>{{s.studentName}}</td>
+            <td>{{batchName}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

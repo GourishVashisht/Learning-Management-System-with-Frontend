@@ -1,0 +1,26 @@
+<div class="container">
+    <div class='panel panel-primary' style="margin-top: 40px;" >
+      <div class='panel-heading'>
+        {{heading}}
+      </div>
+      <div class='panel-body'>
+        <div class="row">
+          <div *ngFor="let subject of subjectList" class="col-sm-3 card m-4">
+              <h3 style="color:maroon">{{subject.subjectName}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+          <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <a [routerLink]="['/addSubject']"><button class="btn btn-dark">
+      Add Subject
+      </button>
+    </a>
+  </div>
